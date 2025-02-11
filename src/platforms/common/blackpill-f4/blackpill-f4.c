@@ -199,7 +199,7 @@ uint32_t platform_target_voltage_sense(void)
 
 void platform_ospeed_update(const uint32_t frequency)
 {
-	const uint8_t ospeed = frequency > 2000000U ? GPIO_OSPEED_25MHZ : GPIO_OSPEED_2MHZ;
+	const uint8_t ospeed = frequency > 3000000U ? GPIO_OSPEED_25MHZ : GPIO_OSPEED_2MHZ;
 
 	gpio_set_output_options(TCK_PORT, GPIO_OTYPE_PP, ospeed, TCK_PIN);
 	gpio_set_output_options(TMS_PORT, GPIO_OTYPE_PP, ospeed, TMS_PIN);
